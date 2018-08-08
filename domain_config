@@ -15,9 +15,9 @@ memory = 64
 vcpu = 2
 
 # A name for your domain. All domains must have different names.
-name = "TinyNet"
+name = "TinyCPP"
 
-vif = ['mac=00:16:3e:5b:db:5d,ip=10.0.0.101,bridge=netbr0' ]
+# vif = ['mac=00:16:3e:5b:db:5d,ip=10.0.0.101,bridge=netbr0' ]
 
 on_crash = 'destroy'
 

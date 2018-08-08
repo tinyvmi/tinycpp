@@ -78,16 +78,16 @@ elif [ "$mode" == "$opMake" -o "$mode" == "m" -o "$mode" == "$opMakeRun" -o "$mo
 elif [ "$mode" == "$opBuild" -o "$mode" == "b" -o "$mode" == "$opBuildRun" -o "$mode" == "br" ];then
 
   make clean -C ../extras/mini-os $options
-  make clean -C tinynet $options
+  make clean -C $dirname $options
 
-  make -j4 -C ../extras/mini-os $options
+  make -C ../extras/mini-os $options
   res=$?
   if [ $res -ne 0 ]; then
     echo "error run make, return $res"
     exit $res
   fi
 
-  make -j4 $makeTarget $options
+  make $makeTarget $options
   res=$?
   if [ $res -ne 0 ]; then
     echo "error run make, return $res"
