@@ -36,7 +36,7 @@ git log | head
 function createTinyStub(){
 
   cd $buildroot
-  xl create -c ../$dirname/domain_config 
+  sudo xl create -c ../$dirname/domain_config 
   cd -
 
 }
